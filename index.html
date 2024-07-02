@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css"> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="btns">
+         <span class="fa-solid fa-bars"></span>
+    </div>
+      <nav class="sidebar">
+             <div class="text">Side Menu</div>
+             <ul>
+                <li><a href="">Dashboard</a></li>
+                <li>
+                    <a href="" class="feat-btn">Feature <span class="fa-solid fa-caret-up first"></span></a>
+                   
+                    <ul class="feat-show">
+                         <li><a href="">Pages</a></li>
+                         <li><a href="">Elements</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" class="serv-btn">Services <span class="fa-solid fa-caret-up second"></span></a>
+                    <ul class="serv-show">
+                         <li><a href="">App </a></li>
+                         <li><a href="">Elements</a></li>
+                    </ul>
+                </li>
+                 <li><a href="">Portfolio</a></li>
+                 <li><a href="">Portfolio</a></li>
+                 <li><a href="">Portfolio</a></li>
+             </ul>
+      </nav>
+      <script> 
+        $('.btns').click(function(){
+            $(this).toggleClass('click');
+            $('.sidebar').toggleClass('show');
+        })
+                  $(document).ready(function(){
+            $('.feat-btn').click(function(e){
+                e.preventDefault();
+                $(this).next('.feat-show').toggleClass('show');
+            });
+            $('.serv-btn').click(function(e){
+                e.preventDefault();
+                $(this).next('.serv-show').toggleClass('show');
+            });
+        });
+      </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+*{
+    margin: 0 ;
+    padding: 0 ;
+    color: white;
+    box-sizing: border-box ;
+    font-family: 'Courier New', Courier, monospace;
+}
+.sidebar{
+    position: fixed ;
+   width: 250px ;
+   height: 100% ;
+   left: -2200px  ;
+   background-color: black ; 
+   transition: left 0.4s ease;
+}
+.sidebar.show{
+    left: 0px ;
+}
+.sidebar .text{
+
+    font-size: 25px ;
+    line-height: 65px ;
+    text-align: center ;
+    background-color: rgb(26, 24, 24);
+    font-weight: 600 ;
+    letter-spacing: 2px ;
+}
+nav ul{
+    background: black ;
+    height: 100% ;
+    width: 100% ;
+    list-style: none ;
+}
+nav ul li {
+    line-height: 48px ;
+    border-bottom: 1px solid rgb(67, 61, 61) ;
+}
+nav ul li a{
+    color: white ;
+    position: relative;
+    text-decoration: none ;
+    font-size: 18px ;
+    font-weight: 500;
+    display: block ;
+    width: 100% ;
+    padding-left: 40px ;
+    border-left: 3px solid transparent ;
+}
+nav ul li a:hover{
+    color: aqua;
+    background: rgb(110, 9, 212);
+}
+nav ul ul{
+     position: static ;
+     display: none ;
+}
+.show{
+   display: block ;
+}
+nav ul .serv-show .show1{
+   display: block ;
+}
+nav ul ul li{
+    line-height: 42px ;
+    border-bottom: none ;
+}
+nav ul ul li a {
+    font-size: 17px ;
+    color: aliceblue;
+    padding-left: 80px ;
+}
+nav ul li a span{
+    position: absolute ;
+    top: 50% ;
+    right: 40px ;
+    transform: translateY(-50%);
+    transition: 0.4s ;
+}
+nav ul li a:hover span{
+    transform: translateY(-50%) rotate(-180deg);
+}
+.btns {
+    position: absolute ;
+    top: 15px ;
+    left: 45px ;
+    height: 45px ;
+    width: 45px ;
+    background: black ;
+    text-align: center;
+    cursor: pointer;
+    transition: left 0.4s ease;
+    
+}
+.btns.click{
+     left: 260px ;
+}
+.btns.click span:before{
+    content: '\f00d';
+}
+.btns span {
+    font-size: 24px;
+    color: white ;
+    line-height: 45px ;
+  
+}
